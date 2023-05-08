@@ -14,4 +14,9 @@ function range_slider_integer (opts){
     shadow.append(range_slider, input_integer)
 
     return el
+
+    function listen (message) {
+        const {type, body} = message
+        console.log(message)
+    }
 }
