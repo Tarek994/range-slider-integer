@@ -12,6 +12,9 @@ function range_slider_integer (opts){
     const input_integer =integer(opts, listen)
 
     const style = document.createElement('style')
+
+    style.textContent = get_theme()
+
     const output = document.createElement('div')
     output.innerText = 0
 
