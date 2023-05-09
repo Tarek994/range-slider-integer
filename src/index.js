@@ -16,6 +16,7 @@ function range_slider_integer (opts){
     style.textContent = get_theme()
 
     const output = document.createElement('div')
+    output.classList.add('output')
     output.innerText = 0
 
     shadow.append(range_slider, input_integer, output)
