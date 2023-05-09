@@ -19,7 +19,7 @@ function range_slider_integer (opts){
     output.classList.add('output')
     output.innerText = 0
 
-    shadow.append(range_slider, input_integer, output)
+    shadow.append(range_slider, input_integer,style, output)
 
     return el
 
