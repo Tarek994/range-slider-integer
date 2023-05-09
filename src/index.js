@@ -24,6 +24,12 @@ function range_slider_integer (opts){
 
     return el
 
+    function protocol (message, notify) {
+        const {from} = message
+        state[from] = {value: 0, notify}
+        return listen
+    }
+
     function listen (message) {
         const {type, body} = message
         if (type === 'update') output.innerText = body
