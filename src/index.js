@@ -4,6 +4,7 @@ const integer = require('input-integer_tar')
 module.exports = range_slider_integer
 
 function range_slider_integer (opts){
+    const state = {}
 
     const el = document.createElement('div')
     const shadow = el.attachShadow({mode: 'closed'})
