@@ -23,4 +23,16 @@ function range_slider_integer (opts){
         if (type === 'update') output.innerText = body
         console.log(message)
     }
+
+    function get_theme () {
+        return `
+        .output {
+            border: 1px solid red;
+            padding: 10px;
+            text-align: center;
+            width:200px;
+        }
+        `
+    }
+
 }
