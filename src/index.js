@@ -31,9 +31,11 @@ function range_slider_integer (opts){
     }
 
     function listen (message) {
-        const {type, body} = message
-        if (type === 'update') output.innerText = body
-        console.log(message)
+        const {from, type, data } = message
+        state[from].value = data
+                console.log(state)
+        if (type === 'update') output.innerText = data
+
     }
 
     function get_theme () {
