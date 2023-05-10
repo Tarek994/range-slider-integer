@@ -34,7 +34,14 @@ function range_slider_integer (opts){
         const {from, type, data } = message
         state[from].value = data
                 console.log(state)
-        if (type === 'update') output.innerText = data
+        if (type === 'update') {
+            output.innerText = data
+            var notify
+            if (from === 'range-0') notify = state['input-integer-0'].notify
+            else if (from === 'input-integer-0') notify = state['range-0'].notify
+            notify({type, data})
+        }
+
 
     }
 
