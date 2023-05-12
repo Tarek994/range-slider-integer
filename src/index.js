@@ -45,14 +45,16 @@ function range_slider_integer (opts){
 
     }
 
-    function get_theme () {
+    function get_theme() {
         return `
-        .output {
-            border: 1px solid red;
-            padding: 10px;
-            text-align: center;
-            width:200px;
+        .rsi{
+            padding: 5%;
+            display: grid;
+            grid-template-columns: 8fr 1fr;
+            align-items: center;
+            justify-items: center;
         }
+
         `
     }
 
