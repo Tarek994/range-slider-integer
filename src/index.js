@@ -3,10 +3,12 @@ const integer = require('input-integer_tar')
 
 module.exports = range_slider_integer
 
-function range_slider_integer (opts){
+function range_slider_integer(opts) {
     const state = {}
 
     const el = document.createElement('div')
+    const shadow = el.attachShadow({ mode: 'closed' })
+
     const rsi = document.createElement('div')
     rsi.classList.add('rsi')
 
@@ -24,22 +26,21 @@ function range_slider_integer (opts){
 
     return el
 
-    function protocol (message, notify) {
-        const {from} = message
-        state[from] = {value: 0, notify}
+    function protocol(message, notify) {
+        const { from } = message
+        state[from] = { value: 0, notify }
         return listen
     }
 
-    function listen (message) {
-        const {from, type, data } = message
+    function listen(message) {
+        const { from, type, data } = message
         state[from].value = data
-                console.log(state)
+        console.log(state)
         if (type === 'update') {
-            output.innerText = data
             var notify
             if (from === 'range-0') notify = state['input-integer-0'].notify
             else if (from === 'input-integer-0') notify = state['range-0'].notify
-            notify({type, data})
+            notify({ type, data })
         }
 
 
