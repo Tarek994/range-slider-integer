@@ -7,7 +7,8 @@ function range_slider_integer (opts){
     const state = {}
 
     const el = document.createElement('div')
-    const shadow = el.attachShadow({mode: 'closed'})
+    const rsi = document.createElement('div')
+    rsi.classList.add('rsi')
 
     rsi.append(range_slider, input_integer)
 
