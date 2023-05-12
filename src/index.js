@@ -10,6 +10,10 @@ function range_slider_integer (opts){
     const rsi = document.createElement('div')
     rsi.classList.add('rsi')
 
+
+    const range_slider = range(opts, protocol)
+    const input_integer = integer(opts, protocol)
+
     rsi.append(range_slider, input_integer)
 
     const style = document.createElement('style')
