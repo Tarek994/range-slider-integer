@@ -9,8 +9,7 @@ function range_slider_integer (opts){
     const el = document.createElement('div')
     const shadow = el.attachShadow({mode: 'closed'})
 
-    const range_slider =range(opts, protocol)
-    const input_integer =integer(opts, protocol)
+    const rsi = document.createElement('div')
 
     const style = document.createElement('style')
 
