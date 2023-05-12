@@ -24,7 +24,7 @@
     "budo": "^11.7.0"
   },
   "dependencies": {
-    "input-integer_tar": "^0.0.2",
-    "range-slider_tar": "^0.0.2"
+    "input-integer_tar": "^0.0.3",
+    "range-slider_tar": "^0.0.3"
   }
 }
