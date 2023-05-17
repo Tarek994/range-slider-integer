@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/Tarek994/range-slider-integer#readme",
   "devDependencies": {
-    "bodo": "^1.0.0",
     "browserify": "^17.0.0",
     "budo": "^11.7.0"
   },
